@@ -14,7 +14,7 @@ Welcome
 		
 ?><br>
 Your email address is: <?php
-	echo $_GET["email"];
+	echo $_POST["email"];
 	echo filter_input(INPUT_GET, 'email');
 	?>
 
