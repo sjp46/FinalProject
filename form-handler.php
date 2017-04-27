@@ -1,22 +1,17 @@
+<?php
+	require_once 'database.php';
+	
+	$query = 'SELECT * FROM finalproject ORDER BY id';
+	$statement = $db->prepare($query);
+	$statement->execute();
+	$categories = $statement->fetchAll();
+	$statement->closeCursor();
+?>
 <html>
 <body>
 
-Welcome 
+<br>
 
-<?php 
-	if (isset($_POST["fname"])){
-		echo $_POST["fname"];
-	}
-	else {
-		echo "(you didn't provide a name)";
-	}
-	
-		
-?><br>
-Your email address is: <?php
-	echo $_GET["email"];
-	echo filter_input(INPUT_GET, 'email');
-	?>
 
 </body>
 </html>
